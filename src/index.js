@@ -13,7 +13,8 @@ app.use('/api' , apiRoutes );
 
 const PostRepository = require('./repository/post-repository.js');
 const PostService = require('./service/post-service.js');
-
+const userRepository = require('./repository/user-repository.js');
+const UserRepo = new userRepository();
 
 app.listen(PORT,async()=>{
     console.log("server running at port ", PORT);
@@ -24,6 +25,8 @@ app.listen(PORT,async()=>{
     //     title : "fun" , 
     //     content : "hey #bunny #buns #move "
     // })
+    // const response = await UserRepo.getUserByEmail({email : "ayushchopra0@gmail.com"});
+    // console.log(response);
 })
 
 
